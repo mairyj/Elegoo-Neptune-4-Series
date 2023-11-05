@@ -2,8 +2,9 @@
 My dear friends, hello! Here you will find all my work on the Neptune 4 series.
 
 
-
+--------------------------------------------------------------------------------------------------------------
 FOR NETPUNE 4/4 PRO : This printer.cfg update is based on the official Elegoo version released on Oct 27, 2023
+--------------------------------------------------------------------------------------------------------------
 
 To make the change is quite simple and I made an explanatory video in French here:
 https://www.youtube.com/live/P2hcYcHyxnU?si=8-5hb7HC1qCNDelT
@@ -47,9 +48,9 @@ home first)
 • Added macros for PID Extruder / BED / BED2 (just for Pro)
 
 
-
+-------------------------------------------------------------------------------------------------------
 FOR NETPUNE 4 Plus /4 Max : This printer.cfg update is based on the official Elegoo version 1.2.2.43
-
+-------------------------------------------------------------------------------------------------------
 
 Change made after update 1.2.2.43 Neptune 4 Plus:
 
