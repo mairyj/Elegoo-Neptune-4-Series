@@ -1,0 +1,17 @@
+Start
+
+;Nozzle diameter = {machine_nozzle_size}
+;Filament type = {material_type}
+;Filament name = {material_brand} {material_name}
+;Filament weight = {filament_weight}
+;M109 S{material_print_temperature}
+;M190 S{material_bed_temperature}
+FLASHLIGHT_ON ;Led ON
+MODLELIGHT_ON ;Led Hotend ON
+PRINT_START BED_TEMP={material_bed_temperature_layer_0} EXTRUDER_TEMP={material_print_temperature_layer_0} ;no modified please
+
+End
+
+PRINT_END
+MODLELIGHT_OFF ;Led OFF
+FLASHLIGHT_OFF ;Led Hotend OFF
