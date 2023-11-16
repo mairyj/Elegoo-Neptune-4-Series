@@ -65,7 +65,7 @@ home first)
 
 
 -------------------------------------------------------------------------------------------------------
-FOR NETPUNE 4 Plus /4 Max : This printer.cfg update is based on the official Elegoo version 1.2.2.43
+FOR NETPUNE 4 Plus /4 Max : This printer.cfg update is based on the official Elegoo version 1.2.2.51
 -------------------------------------------------------------------------------------------------------
 
 (FR) Changelaog 16 novembre 2023
