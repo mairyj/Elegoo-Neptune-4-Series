@@ -9,7 +9,7 @@ https://www.youtube.com/live/P2hcYcHyxnU?si=8-5hb7HC1qCNDelT
 
 
 --------------------------------------------------------------------------------------------------------------
-FOR NETPUNE 4/4 PRO : This printer.cfg update is based on the official Elegoo version released on Oct 27, 2023
+FOR NETPUNE 4/4 PRO : This printer.cfg update is based on the official Elegoo version released 1.2.2.41
 --------------------------------------------------------------------------------------------------------------
 
 Changelog based 1.2.2.41 (16 november 2023)
