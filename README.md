@@ -13,10 +13,15 @@ FOR NETPUNE 4/4 PRO : This printer.cfg update is based on the official Elegoo ve
 --------------------------------------------------------------------------------------------------------------
 
 Changelog based 1.2.2.41 (16 november 2023)
+
 • pressure adavance set 0.012
+
 • add [exclude_object]
+
 • add [gcode_arcs]
+
 • add firmware retraction
+
 
 
 
