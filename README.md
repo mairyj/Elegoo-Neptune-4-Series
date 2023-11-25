@@ -65,8 +65,17 @@ home first)
 
 
 -------------------------------------------------------------------------------------------------------
-FOR NETPUNE 4 Plus /4 Max : This printer.cfg update is based on the official Elegoo version 1.2.2.51
+FOR NETPUNE 4 Plus /4 Max : This printer.cfg update is based on the official Elegoo version 1.2.2.64
 -------------------------------------------------------------------------------------------------------
+no change since .51 on printer.cfg the modifications that elegoo made are if:
+
+NEPTUNE 4 PLUS & 4 MAX
+Version number: 1.2.2.64 firmware
+Update time: 2023/11/18
+Firmware issues resolved:
+1. Permission issue for saving Z-offset value on the web side
+2. Moonraker timeout issue may occur after updating to firmware 1.2.2.51.
+3. Optimize the power-off resume printing function
 
 (FR) Changelaog 16 novembre 2023
 Changement fais après update 1.2.2.51 Neptune 4 Plus/Max :
