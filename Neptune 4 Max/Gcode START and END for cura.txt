@@ -4,7 +4,7 @@ START GCODE
 ;ELEGOO NEPTUNE 4 MAX
 M220 S100 ;Set the feed speed to 100%
 M221 S100 ;Set the flow rate to 100%
-M104 S140
+M104 S{material_print_temperature_layer_0}
 M190 S{material_bed_temperature_layer_0}
 G90
 G28 ;home
