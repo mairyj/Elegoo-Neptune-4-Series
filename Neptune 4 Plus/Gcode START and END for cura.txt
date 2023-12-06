@@ -1,6 +1,5 @@
 START GCODE
 
-;includeThumbnail
 ;ELEGOO NEPTUNE 4 PLUS
 M220 S100 ;Set the feed speed to 100%
 M221 S100 ;Set the flow rate to 100%
