@@ -4,7 +4,7 @@ Mes chers camarades bien le bonjour !
 
 --------------------------------------------------------------------------------------------------------------
 
-/!\/!\/!\/!\/!\ Merci de prendre le temps de faire un backup de votre configuration et de bien suivre les instructions /!\/!\/!\/!\/!\
+/!\ Merci de prendre le temps de faire un backup de votre configuration et de bien suivre les instructions /!\
 Serie de tutoriels : https://youtu.be/tKLLveLwOtk?si=3fk4zhH4wfSTtkz2
 --------------------------------------------------------------------------------------------------------------
 
@@ -51,7 +51,7 @@ J’ai réaliser une série de tutoriel en français afin de vous aider dans cha
 
 --------------------------------------------------------------------------------------------------------------
 
-/!\/!\/!\/!\/!\ Si votre imprimante fonctionne bien, il n’est pas nécessaire de faire une mise à jour !!!! N’utiliser mon printer.cfg que si vous savez ce que vous faites ;-) j’ai effectué ses modifications principalement pour moi et elle fonctionne parfaitement sur mes imprimantes. Je les partage donc avec la communauté. Je ne pourrais être tenu responsable de ce que vous faites avec vos imprimantes, le but ici est d'aider et de partager, toutes vos remarques sont bonnes à prendre afin d'améliorer mes configurations et ainsi améliorer l'expérience avec cette gamme d'imprimantes. /!\/!\/!\/!\/!\
+/!\ Si votre imprimante fonctionne bien, il n’est pas nécessaire de faire une mise à jour !!!! N’utiliser mon printer.cfg que si vous savez ce que vous faites ;-) j’ai effectué ses modifications principalement pour moi et elle fonctionne parfaitement sur mes imprimantes. Je les partage donc avec la communauté. Je ne pourrais être tenu responsable de ce que vous faites avec vos imprimantes, le but ici est d'aider et de partager, toutes vos remarques sont bonnes à prendre afin d'améliorer mes configurations et ainsi améliorer l'expérience avec cette gamme d'imprimantes. /!\
 --------------------------------------------------------------------------------------------------------------
 
 # Welcome to my GitHub for Elegoo Neptune 4
@@ -60,7 +60,7 @@ Hello, my dear friends!
 
 -------------------------------------------------- -------------------------------------------------- ----------
 
-/!\/!\/!\/!\/!\ Please take the time to make a backup of your configuration and follow the instructions carefully /!\/!\/!\/!\/!\
+/!\ Please take the time to make a backup of your configuration and follow the instructions carefully /!\
 Tutorial series: https://youtu.be/tKLLveLwOtk?si=3fk4zhH4wfSTtkz2
 -------------------------------------------------- -------------------------------------------------- ----------
 
@@ -107,5 +107,5 @@ I have produced a series of tutorials in French to help you in each step of the 
 
 -------------------------------------------------- -------------------------------------------------- ----------
 
-/!\/!\/!\/!\/!\ If your printer is working fine, there is no need to update!!!! Only use my printer.cfg if you know what you are doing ;-) I made its modifications mainly for myself and it works perfectly on my printers. So I share them with the community. I cannot be held responsible for what you do with your printers, the goal here is to help and share, all your comments are worth taking in order to improve my configurations and thus improve the experience with this range of printers. printers. /!\/!\/!\/!\/!\
+/!\ If your printer is working fine, there is no need to update!!!! Only use my printer.cfg if you know what you are doing ;-) I made its modifications mainly for myself and it works perfectly on my printers. So I share them with the community. I cannot be held responsible for what you do with your printers, the goal here is to help and share, all your comments are worth taking in order to improve my configurations and thus improve the experience with this range of printers. printers. /!\
 -------------------------------------------------- -------------------------------------------------- ----------
