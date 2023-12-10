@@ -5,7 +5,7 @@ Mes chers camarades bien le bonjour !
 --------------------------------------------------------------------------------------------------------------
 
 /!\ Merci de prendre le temps de faire un backup de votre configuration et de bien suivre les instructions /!\
-Serie de tutoriels : https://youtu.be/tKLLveLwOtk?si=3fk4zhH4wfSTtkz2
+Série de tutoriels : https://youtu.be/tKLLveLwOtk?si=3fk4zhH4wfSTtkz2
 --------------------------------------------------------------------------------------------------------------
 
 
