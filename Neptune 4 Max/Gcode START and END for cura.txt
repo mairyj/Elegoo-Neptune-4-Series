@@ -9,9 +9,9 @@ G90
 G28 ;home
 G1 Z10 F300
 G1 X165 Y0 F6000
-G1 Z0 F300
 M109 S{material_print_temperature_layer_0}
 M190 S{material_bed_temperature_layer_0}
+G1 Z0 F300
 G92 E0 ;Reset Extruder
 G1 X165 Y0 Z0.4 F300 ;Move to start position
 G1 X265 E30 F400 ;Draw the first line
