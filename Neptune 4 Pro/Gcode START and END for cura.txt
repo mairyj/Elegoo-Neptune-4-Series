@@ -9,12 +9,12 @@ G28 ;home
 G92 E0 ;Reset Extruder
 G1 Z4.0 F3000 ;Move Z Axis up
 G92 E0 ;Reset Extruder
-G1 X1.1 Y20 Z0.28 F5000.0 ;Move to start position
+G1 X75 Y1 Z0.28 F5000.0 ;Move to start position
 M109 S{material_print_temperature_layer_0}
 M190 S{material_bed_temperature_layer_0}
-G1 X1.1 Y80.0 Z0.28 F1500.0 E10 ;Draw the first line
-G1 X1.4 Y80.0 Z0.28 F5000.0 ;Move to side a little
-G1 X1.4 Y20 Z0.28 F1500.0 E20 ;Draw the second line
+G1 X75 Y0 Z0.4 F300 ;Move to start position
+G1 X175 E30 F400 ;Draw the first line
+G1 Z0.6 F120.0 ;Move to side a little
 G92 E0 ;Reset Extruder
 G1 Z2.0 F3000 ;Move Z Axis up
 
