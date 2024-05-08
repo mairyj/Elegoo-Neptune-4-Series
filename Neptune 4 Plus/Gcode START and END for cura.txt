@@ -1,12 +1,16 @@
+/!\/!\/!\/!\ Si vous voulez activé le bed mesh area il faut retirer le ; devant la ligne 12 /!\/!\/!\/!\/!\
+/!\/!\/!\/!\ If you want to activate the bed mesh area you must remove the ; in front of line 12 /!\/!\/!\/!\/!\
+
 START GCODE
 
 ;ELEGOO NEPTUNE 4 PLUS
 M220 S100 ;Set the feed speed to 100%
 M221 S100 ;Set the flow rate to 100%
-M104 S{material_print_temperature_layer_0}
 M140 S{material_bed_temperature_layer_0}
 G90
 G28 ;home
+;BED_MESH_CALIBRATE  AREA_START=%MINX%,%MINY% AREA_END=%MAXX%,%MAXY%
+M104 S{material_print_temperature_layer_0
 G1 Z10 F300
 G1 X115 Y0 F6000
 M109 S{material_print_temperature_layer_0}

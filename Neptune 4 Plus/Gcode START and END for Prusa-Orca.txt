@@ -1,0 +1,40 @@
+/!\/!\/!\/!\ Si vous voulez activé le bed mesh area il faut retirer le ; devant la ligne 13 /!\/!\/!\/!\/!\
+/!\/!\/!\/!\ If you want to activate the bed mesh area you must remove the ; in front of line 13 /!\/!\/!\/!\/!\
+
+START
+
+;ELEGOO NEPTUNE 4 PLUS
+M220 S100 ;Set the feed speed to 100%
+M221 S100 ;Set the flow rate to 100%
+M140 s[first_layer_bed_temperature]
+G90
+G28 ;home
+;BED_MESH_CALIBRATE AREA_START={first_layer_print_min[0]},{first_layer_print_min[1]} AREA_END={first_layer_print_max[0]},{first_layer_print_max[1]}
+M104 s[first_layer_temperature]
+G1 Z10 F300
+G1 X115 Y0 F6000
+G1 Z0 F300
+M190 s[first_layer_bed_temperature]
+M109 s[first_layer_temperature]
+G92 E0 ;Reset Extruder
+G1 X115 Y0 Z0.4 F300 ;Move to start position
+G1 X215.0 E30 F400 ;Draw the first line
+G1 Z0.6 F120.0 ;Move to side a little
+G1 X210 F3000
+G92 E0 ;Reset Extruder
+ALL_LIGHTS
+
+
+END 
+
+
+G91 ;Relative positionning
+G1 E-2 F2700 ;Retract a bit
+G1 E-8 X5 Y5 Z3 F3000 ;Retract
+G90 ;Absolute positionning
+G1 X10 Y300 F6000;Finish print
+M106 S0 ;Turn-off fan
+M104 S0 ;Turn-off hotend
+M140 S0 ;Turn-off bed
+M84 X Y E ;Disable all steppers but Z
+ALL_LIGHTS

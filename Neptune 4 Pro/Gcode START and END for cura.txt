@@ -1,20 +1,24 @@
-START GCODE 
+/!\/!\/!\/!\ Si vous voulez activé le bed mesh area il faut retirer le ; devant la ligne 12 /!\/!\/!\/!\/!\
+/!\/!\/!\/!\ If you want to activate the bed mesh area you must remove the ; in front of line 12 /!\/!\/!\/!\/!\
 
-;ELEGOO NEPTUNE 4 Pro
+START GCODE
+
+;ELEGOO NEPTUNE 4/4Pro
 M220 S100 ;Set the feed speed to 100%
 M221 S100 ;Set the flow rate to 100%
-M104 S{material_print_temperature_layer_0}
 M140 S{material_bed_temperature_layer_0}
 G28 ;home
+;BED_MESH_CALIBRATE  AREA_START=%MINX%,%MINY% AREA_END=%MAXX%,%MAXY%
+M104 S{material_print_temperature_layer_0}
 G92 E0 ;Reset Extruder
 G1 Z4.0 F3000 ;Move Z Axis up
 G92 E0 ;Reset Extruder
-G1 X75 Y1 Z0.28 F5000.0 ;Move to start position
+G1 X1.1 Y20 Z0.28 F5000.0 ;Move to start position
 M109 S{material_print_temperature_layer_0}
 M190 S{material_bed_temperature_layer_0}
-G1 X75 Y0 Z0.4 F300 ;Move to start position
-G1 X175 E30 F400 ;Draw the first line
-G1 Z0.6 F120.0 ;Move to side a little
+G1 X1.1 Y80.0 Z0.28 F1500.0 E10 ;Draw the first line
+G1 X1.4 Y80.0 Z0.28 F5000.0 ;Move to side a little
+G1 X1.4 Y20 Z0.28 F1500.0 E20 ;Draw the second line
 G92 E0 ;Reset Extruder
 G1 Z2.0 F3000 ;Move Z Axis up
 
@@ -22,13 +26,15 @@ END GCODE
 
 G91 ;Relative positionning
 G1 E-2 F2700 ;Retract a bit
-G1 E-2 Z0.2 F1600 ;Retract and raise Z
+G1 E-2 Z0.2 F2400 ;Retract and raise Z
 G1 X5 Y5 F3000 ;Wipe out
-G1 Z10 ;Raise Z more
+G1 Z2 ;Raise Z more
 G90 ;Absolute positionning
-G1 X0 Y{machine_depth} ;Present print
+G1 X0 Y230 ;Present print
 M106 S0 ;Turn-off fan
 M104 S0 ;Turn-off hotend
 M140 S0 ;Turn-off bed
 M84 X Y E ;Disable all steppers but Z
+
+
 

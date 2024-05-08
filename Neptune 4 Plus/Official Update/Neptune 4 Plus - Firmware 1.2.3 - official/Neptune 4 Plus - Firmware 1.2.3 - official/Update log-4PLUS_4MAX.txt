@@ -1,0 +1,89 @@
+Notes: 
+1.If your current firmware version of NEPTUNE 4 PLUS/MAX is earlier than 1.2.2.64, it is recommended to update the fix pack first to avoid errors due to compatibility issues.
+2.Using the fix pack(1.2.2.65) will automatically delete the contents in the task list:
+If you are used to uploading print files on the web side for printing, please note: To ensure that the system has enough memory to update the fix pack, this update will automatically delete the contents of the task list in the local memory. If necessary, please back up in advance.
+
+1.2.2.65Firmware fix pack mainly solves the problem:
+1.Resolve compatibility issues encountered when upgrading firmware across versions.
+2.Can fix the compatibility issues that will occur after updating klipper/moonraker/fluidd (Note: this product does not support updating the official klipper, otherwise there will be compatibility errors).
+The test situation is as follows:
+ a. Simulation test: Use kiauh to uninstall klipper/moonraker/fluidd and directly use the firmware fix pack. The machine starts normally but cannot access the web side and needs to reinstall fluidd using kiauh.
+ b. Simulation test: Use kiauh to uninstall moonraker and fluidd.  Then install only the official moonraker, not fluidd.  After the device is powered on, it is always stuck in the startup screen.  Shut down, and the machine starts normally after using the firmware fix pack.  After updating the new firmware, no abnormal error was found.  (web cannot be accessed.)
+ c.Simulation test: After mistakenly deleting klipper/moonraker/fluidd in the management folder, the firmware fix package is used directly, and the machine starts normally.
+ d.Simulation test: klipper/moonraker/fluidd was upgraded in the background, and then the firmware repair package was directly used. The machine started normally and could access the web.
+
+
+Screen Firmware Version: 1.2.13
+Update Date: April 20, 2024
+Compatible With Mainboard Firmware Version: V1.2.3.0
+1. Added prompt page:  An error occurs when returning to home fails.
+2. Added: Wi-Fi switch.
+3. Added：Wi-Fi keyboard supports special characters.
+
+
+Mainboard  Firmware Version: V1.2.3.0
+Update Date: April 20, 2024
+Compatible With Screen Firmware Version: 1.2.13
+1. Added: Error when return to home failed.
+2. Changed: Camera service is now enabled by default.
+3. Optimized: Reduced client load to avoid "timer too close" errors caused by Klipper overload.
+4. Optimized: Input shaping
+5. Changed:  File list now supports viewing and printing of local files (USB drive folder is named SDA1 by default).
+
+Screen firmware version: 1.2.12
+Update time: 2023/12/25
+Compatible firmware version: V1.2.2.65
+The temperature display is added to the error page to determine whether there is a (hot end, hot bed) thermistor fault.
+
+
+New fix pack version: V1.2.2.65
+Update time:  2023/12/25
+For details about how to use the fix pack, see <Firmware update instructions>.
+Note: The use method of the firmware fix pack has changed, please follow the steps.
+
+
+Firmware version: V1.2.2.65
+Update time: 2023/12/25
+Compatible screen firmware version: 1.2.12
+Firmware issues resolved:
+1.Protect the preparation phase before printing. Prevent the web side from printing again and pop-up warning.
+2.Optimize the pre-print preparation function to prevent misoperation during the printing process to initiate printing and interfere with the current printing.
+3.Avoid output $log_z information on the web terminal.
+4.Optimize the power-off resume printing function.
+5.Added real-time temperature display on the error page.
+6.Added support for controlling soc gpio sled1 and sled2 via the web interface.
+ Simply add the macros in the printer.cfg file, as shown below: (Note: the macros
+ have been added to the printer.cfg file, uncomment to use)
+
+[gcode_macro FLASHLIGHT_SWITCH]
+description: Switch Hotend LEDs
+gcode:
+  RUN_SHELL_COMMAND CMD=FLASHLIGHT
+
+[gcode_shell_command FLASHLIGHT]
+command: sh /home/mks/sled2.sh
+timeout: 5.
+
+[gcode_macro MODLELIGHT_SWITCH]
+description: Switch Logo LEDs
+gcode:
+  RUN_SHELL_COMMAND CMD=MODLELIGHT
+
+[gcode_shell_command MODLELIGHT]
+command: sh /home/mks/sled1.sh
+timeout: 5.
+
+
+
+
+
+Add firmware  fix pack, version V1.2.2.64
+If your NEPTUNE 4PLUS/4MAX firmware version is lower than 1.2.2.64, it is recommended to update the  fix pack first to avoid compatibility issues and errors. Please refer to the "Firmware Update Instructions" for the  fix pack  usage steps.
+
+
+Firmware version: V1.2.2.64
+Update time: 2023/11/18
+Firmware issues resolved:
+1. Permission issue for saving Z-offset value on the web side.
+2. Moonraker timeout issue may occur after updating to firmware 1.2.2.51.
+3. Optimize the power-off resume printing function.
