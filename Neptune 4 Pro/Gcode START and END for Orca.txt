@@ -1,5 +1,5 @@
-/!\/!\/!\/!\ Si vous voulez activé le bed mesh area il faut retirer le ; devant la ligne 13 /!\/!\/!\/!\/!\
-/!\/!\/!\/!\ If you want to activate the bed mesh area you must remove the ; in front of line 13 /!\/!\/!\/!\/!\
+/!\/!\/!\/!\ Si vous voulez activé le bed mesh area il faut retirer le ; devant la ligne 12 /!\/!\/!\/!\/!\
+/!\/!\/!\/!\ If you want to activate the bed mesh area you must remove the ; in front of line 12 /!\/!\/!\/!\/!\
 
 START GCODE 
 
