@@ -1,0 +1,39 @@
+;Orignal Start End Gcode
+
+
+
+;Start 
+
+;{current_cura_version} 
+;{machine_name} 
+M220 S100 ;Set the feed speed to 100%
+M221 S{print_flow_percentage} ;Set the print traffic percentage
+M104 S140
+M190 S{material_bed_temperature_layer_0}
+G90
+G28 ;home
+G1 Z10 F300
+G1 X67.5 Y0 F6000
+G1 Z0.4 F300
+M109 S{material_print_temperature_layer_0}
+G92 E0 ;Reset Extruder
+G1 X67.5 Y0 Z0.4 F300 ;Move to start position
+G1 X167.5 E30 F400 ;Draw the first line
+G1 Z0.6 F120.0 ;Move to side a little
+G1 X162.5 F3000
+G92 E0 ;Reset Extruder
+
+
+; End
+
+G91 ;Relative positionning
+G1 E-2 F2700 ;Retract a bit
+G1 E-8 X5 Y5 Z3 F3000 ;Retract
+G90 ;Absolute positionning
+G1 X0 Y230 ;Present print
+M220 S100 ;Reset the print speed to 100% 
+M221 S100 ;Reset extrusion flow to 100% 
+M106 S0 ;Turn-off fan
+M104 S0 ;Turn-off hotend
+M140 S0 ;Turn-off bed
+M84 ;Disable all steppers
