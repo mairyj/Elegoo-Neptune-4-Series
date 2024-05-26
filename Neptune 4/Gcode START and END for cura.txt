@@ -1,29 +1,51 @@
-/!\/!\/!\/!\ Si vous voulez activé le bed mesh area il faut retirer le ; devant la ligne 12 /!\/!\/!\/!\/!\
-/!\/!\/!\/!\ If you want to activate the bed mesh area you must remove the ; in front of line 12 /!\/!\/!\/!\/!\
-
-
-START GCODE
+;###########################################################################
+;START GCODE SANS/WITHOUT Bed MESH AREA
+;###########################################################################
 
 ;ELEGOO NEPTUNE 4/4Pro
 M220 S100 ;Set the feed speed to 100%
 M221 S100 ;Set the flow rate to 100%
 M140 S{material_bed_temperature_layer_0}
 G28 ;home
-;BED_MESH_CALIBRATE  AREA_START=%MINX%,%MINY% AREA_END=%MAXX%,%MAXY%
-M104 S{material_print_temperature_layer_0}
+M104 S140
 G92 E0 ;Reset Extruder
 G1 Z4.0 F3000 ;Move Z Axis up
 G92 E0 ;Reset Extruder
 G1 X1.1 Y20 Z0.28 F5000.0 ;Move to start position
-M109 S{material_print_temperature_layer_0}
 M190 S{material_bed_temperature_layer_0}
+M109 S{material_print_temperature_layer_0}
 G1 X1.1 Y80.0 Z0.28 F1500.0 E10 ;Draw the first line
 G1 X1.4 Y80.0 Z0.28 F5000.0 ;Move to side a little
 G1 X1.4 Y20 Z0.28 F1500.0 E20 ;Draw the second line
 G92 E0 ;Reset Extruder
 G1 Z2.0 F3000 ;Move Z Axis up
 
-END GCODE
+;###########################################################################
+;START GCODE AVEC/WITH Bed MESH AREA
+;###########################################################################
+
+;ELEGOO NEPTUNE 4/4Pro
+M220 S100 ;Set the feed speed to 100%
+M221 S100 ;Set the flow rate to 100%
+M140 S{material_bed_temperature_layer_0}
+M104 S140
+G28 ;home
+M190 S{material_bed_temperature_layer_0}
+BED_MESH_CALIBRATE  AREA_START=%MINX%,%MINY% AREA_END=%MAXX%,%MAXY%
+G92 E0 ;Reset Extruder
+G1 Z4.0 F3000 ;Move Z Axis up
+G92 E0 ;Reset Extruder
+G1 X1.1 Y20 Z0.28 F5000.0 ;Move to start position
+M109 S{material_print_temperature_layer_0}
+G1 X1.1 Y80.0 Z0.28 F1500.0 E10 ;Draw the first line
+G1 X1.4 Y80.0 Z0.28 F5000.0 ;Move to side a little
+G1 X1.4 Y20 Z0.28 F1500.0 E20 ;Draw the second line
+G92 E0 ;Reset Extruder
+G1 Z2.0 F3000 ;Move Z Axis up
+
+;###########################################################################
+;END GCODE
+;###########################################################################
 
 G91 ;Relative positionning
 G1 E-2 F2700 ;Retract a bit

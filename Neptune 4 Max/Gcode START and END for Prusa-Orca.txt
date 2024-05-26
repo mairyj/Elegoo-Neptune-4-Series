@@ -1,16 +1,14 @@
-/!\/!\/!\/!\ Si vous voulez activé le bed mesh area il faut retirer le ; devant la ligne 12 /!\/!\/!\/!\/!\
-/!\/!\/!\/!\ If you want to activate the bed mesh area you must remove the ; in front of line 12 /!\/!\/!\/!\/!\
-
-START
+;###########################################################################
+;START GCODE SANS/WITHOUT Bed MESH AREA
+;###########################################################################
 
 ;ELEGOO NEPTUNE 4 MAX
 M220 S100 ;Set the feed speed to 100%
 M221 S100 ;Set the flow rate to 100%
-M140 s[first_layer_bed_temperature]
+M140 S[first_layer_bed_temperature]
 G90
+M104 S140
 G28 ;home
-;BED_MESH_CALIBRATE AREA_START={first_layer_print_min[0]},{first_layer_print_min[1]} AREA_END={first_layer_print_max[0]},{first_layer_print_max[1]}
-M104 s[first_layer_temperature]
 G1 Z10 F300
 G1 X165 Y0.5 F6000
 G1 Z0 F300
@@ -24,7 +22,34 @@ G1 X260 F3000
 G92 E0 ;Reset Extruder
 ALL_LIGHTS
 
-END
+;###########################################################################
+;START GCODE AVEC/WITH Bed Mesh AREA
+;###########################################################################
+
+;ELEGOO NEPTUNE 4 MAX
+M220 S100 ;Set the feed speed to 100%
+M221 S100 ;Set the flow rate to 100%
+M140 S[first_layer_bed_temperature]
+G90
+M104 S140
+G28 ;home
+M190 s[first_layer_bed_temperature]
+BED_MESH_CALIBRATE AREA_START={first_layer_print_min[0]},{first_layer_print_min[1]} AREA_END={first_layer_print_max[0]},{first_layer_print_max[1]}
+G1 Z10 F300
+G1 X165 Y0.5 F6000
+G1 Z0 F300
+M109 s[first_layer_temperature]
+G92 E0 ;Reset Extruder
+G1 X165 Y0.5 Z0.4 F300 ;Move to start position
+G1 X265 E30 F400 ;Draw the first line
+G1 Z0.6 F120.0 ;Move to side a little
+G1 X260 F3000
+G92 E0 ;Reset Extruder
+ALL_LIGHTS
+
+;###########################################################################
+;END GCODE
+;###########################################################################
 
 G91 ;Relative positionning
 G1 E-2 F2700 ;Retract a bit
