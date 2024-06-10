@@ -10,7 +10,6 @@ M104 s140
 G90
 G28 ;home
 M190 S[bed_temperature_initial_layer_single]
-;BED_MESH_CALIBRATE AREA_START={first_layer_print_min[0]},{first_layer_print_min[1]} AREA_END={first_layer_print_max[0]},{first_layer_print_max[1]}
 G92 E0 ;Reset Extruder
 G1 Z4.0 F3000 ;Move Z Axis up
 G92 E0 ;Reset Extruder
@@ -22,6 +21,7 @@ G1 X175 E30 F400 ;Draw the first line
 G1 Z0.6 F120.0 ;Move to side a little
 G92 E0 ;Reset Extruder
 G1 Z2.0 F3000 ;Move Z Axis up
+;ALL_LIGHTS ; All Lights ON : Delete ; for activate option 
 
 ;###########################################################################
 ;START GCODE AVEC/WITH Bed Mesh AREA
@@ -46,7 +46,7 @@ G1 X175 E30 F400 ;Draw the first line
 G1 Z0.6 F120.0 ;Move to side a little
 G92 E0 ;Reset Extruder
 G1 Z2.0 F3000 ;Move Z Axis up
-
+;ALL_LIGHTS ; All Lights ON : Delete ; for activate option 
 
 ;###########################################################################
 ;END GCODE

@@ -20,7 +20,7 @@ G1 X215.0 E30 F400 ;Draw the first line
 G1 Z0.6 F120.0 ;Move to side a little
 G1 X210 F3000
 G92 E0 ;Reset Extruder
-ALL_LIGHTS
+;ALL_LIGHTS ; All Lights ON : Delete ; for activate option 
 
 ;###########################################################################
 ;START GCODE AVEC/WITH Bed Mesh AREA
@@ -45,7 +45,7 @@ G1 X215.0 E30 F400 ;Draw the first line
 G1 Z0.6 F120.0 ;Move to side a little
 G1 X210 F3000
 G92 E0 ;Reset Extruder
-ALL_LIGHTS
+;ALL_LIGHTS ; All Lights ON : Delete ; for activate option 
 
 ;###########################################################################
 ;END GCODE
