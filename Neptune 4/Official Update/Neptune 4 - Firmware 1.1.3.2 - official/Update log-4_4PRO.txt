@@ -1,0 +1,67 @@
+Firmware Version: V1.2.3.2
+Update Date: 2024/10/30
+1. Fixed an issue where selecting files sliced with Ocra and Prusa that have print times under ten minutes would cause the printer to reboot.
+2. Added preview image support for gcode files sliced with Cura, Prusa, and Ocra.
+3. Resolved an issue where feeding and retracting materials couldn't be controlled during print pauses.
+
+Firmware Version: V1.1.3.1
+Update Date: July 5, 2024
+1. Optimization: Reduced client load, significantly decreasing the occurrence of overload issues during printing.
+2. Optimization: Introduced power-loss recovery feature 2.0, greatly improving the success rate in power-loss scenarios. Note: As the nozzle remains on the model after a power loss, there may be large unwanted blobs on the top surface when resuming printing, affecting the printing result. It is recommended to use flush cutters to trim the protruding blobs when performing the homing action.
+3. Optimization: Enhanced web-based LED control switch. For K1 V1.1 motherboard, FLASHLIGHT_SWITCH controls the top LED, MODLELIGHT_SWITCH controls the printhead LED. For K1 V1.0 motherboard, flashlight_on/flashlight_off toggles the top LED, modlelight_on/modlelight_off toggles the printhead LED.
+4. Optimization: Resolved the issue of probe position inconsistency during the automatic leveling process. This refers to the situation where the displayed positions on the screen are not synchronized when repeatedly probing a point, leading to a discrepancy between the actual probed positions and their representation on the screen.
+5. Optimization: Improved file list display now presents local files sorted by time, with the latest sliced file listed at the top.
+6. Modified auxiliary bed leveling coordinate to align the nozzle with the support spring.
+7. Added compatibility check to prevent issues when rolling back to previous firmware versions. Screen firmware version 1.2.14 now includes corresponding page prompts. Before upgrading to a previous version, ensure that you update the patch first according to the specific requirements of the version.
+8. Resolved multiple reported issues.
+
+
+Added firmware fix pack, version V1.1.2.53
+If your NEPTUNE 4/4PRO firmware version is lower than 1.1.2.53, it is recommended 
+to update the  fix pack first to avoid compatibility issues and errors. Please refer to
+ the "Firmware Update Instructions" for the  fix pack  usage steps.
+
+Tip：Using the fix pack will automatically delete the contents in the task list
+If you are used to uploading print files on the web side for printing, please note: 
+To ensure that the system has enough memory to update the fix pack, this update
+ will automatically delete the contents of the task list in the local memory. 
+If necessary, please back up in advance.
+
+
+Firmware version: V1.1.2.53
+Update time: 2023/12/15
+Firmware issues resolved:
+1. Optimization: Fixed the issue of not being redirected to the print completion 
+page after printing (when manually switching to other pages during printing).
+
+2. Optimization: Ensured that the web interface has permission to save Z-offset.
+
+3.Optimization: Zoffset storage problem.
+
+4.Optimization: pre-print preparation action, fan noise problems before printing.
+
+5. Optimization: Adapted the power-off resume feature to Orcaslicer 1.8.0. The 
+current power-off resume method checks the Z-axis height. If the Z-lift retraction
+ is enabled during slicing, the power-off resume effect will be affected.
+Solve the Zoffset loss problem through some user test feedback.
+
+6.(Applicable to main control board K1 V1.1) Added support for controlling soc gpio sled1 and sled2 via the web interface.
+Simply add the macros in the printer.cfg file, as shown below: (Note: the macros have been added to the printer.cfg file, uncomment to use)
+
+[gcode_macro FLASHLIGHT_SWITCH]
+description: Switch Hotend LEDs
+gcode:
+  RUN_SHELL_COMMAND CMD=FLASHLIGHT
+
+[gcode_shell_command FLASHLIGHT]
+command: sh /home/mks/sled2.sh
+timeout: 5.
+
+[gcode_macro MODLELIGHT_SWITCH]
+description: Switch Logo LEDs
+gcode:
+  RUN_SHELL_COMMAND CMD=MODLELIGHT
+
+[gcode_shell_command MODLELIGHT]
+command: sh /home/mks/sled1.sh
+timeout: 5.
